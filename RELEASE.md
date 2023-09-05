@@ -14,9 +14,8 @@ The CYW920829M2EVK-02 library includes the following:
 * API documentation
 
 ### What Changed?
-#### v1.0.0 Beta 1
-Note: This revision is only compatible with ModusToolbox Tools 3.0 and newer.
-* Updated pre-production release supporting ModusToolbox 3.0.
+#### v1.0.1
+* Initial production release 
 #### v0.5.0
 * Initial pre-production release
 
@@ -25,8 +24,8 @@ This version of the CYW920829M2EVK-02 BSP was validated for compatibility with t
 
 | Software and Tools                        | Version |
 | :---                                      | :----:  |
-| ModusToolbox™ Software Environment        | 3.0.0   |
-| GCC Compiler                              | 10.3.1  |
+| ModusToolbox™ Software Environment        | 3.1.0   |
+| GCC Compiler                              | 11.3.1  |
 | IAR Compiler                              | 9.30.1  |
 | ARM Compiler                              | 6.16    |
 

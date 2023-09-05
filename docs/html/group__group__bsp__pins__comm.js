@@ -22,5 +22,7 @@ var group__group__bsp__pins__comm =
     [ "CYBSP_BT_UART_CTS", "group__group__bsp__pins__comm.html#ga62f968c28d6dd878d706411644df3b04", null ],
     [ "CYBSP_PDM_CLK", "group__group__bsp__pins__comm.html#gaee3607f958046ea444d57a2263c4b9a3", null ],
     [ "CYBSP_PDM_DATA", "group__group__bsp__pins__comm.html#gaaf4f4f826f24c43f2b6985837f5b77ac", null ],
-    [ "CYBSP_I2S_MCLK", "group__group__bsp__pins__comm.html#ga55ba75f2e287ef4c76b5879c22b85d4f", null ]
+    [ "CYBSP_I2S_MCLK", "group__group__bsp__pins__comm.html#ga55ba75f2e287ef4c76b5879c22b85d4f", null ],
+    [ "CYBSP_DEBUG_UART_RTS", "group__group__bsp__pins__comm.html#gac5ec921782c5ee070ee018636606ccc3", null ],
+    [ "CYBSP_DEBUG_UART_CTS", "group__group__bsp__pins__comm.html#ga8dea402871bf0d6105885b2a504add7c", null ]
 ];
