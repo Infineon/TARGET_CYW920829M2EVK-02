@@ -129,10 +129,13 @@ IMU</h1>
 <li>Default R3 is connected at position BC to use TX10, for TX0 connect R3 at position AC</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md21"></a>
+UART function</h1>
+<p >If cy_retarget_io_init function is used UART receive does not function as required, it is recommended to use the cy_retarget_io_init_fc function. Syntax: cy_retarget_io_init_fc(CYBSP_DEBUG_UART_TX, CYBSP_DEBUG_UART_RX, CYBSP_DEBUG_UART_CTS,CYBSP_DEBUG_UART_RTS,CY_RETARGET_IO_BAUDRATE);</p>
+<h1><a class="anchor" id="autotoc_md22"></a>
 Security Provisioning Settings</h1>
 <p >This board supports enhanced security features which can be configured as part of development. For details about exactly what is available and how to use it, see the <a href="https://www.infineon.com/dgdlac/Infineon-PSoC_64_Secure_MCU_Secure_Boot_SDK_User_Guide-Software-v07_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0f8c361a7666">Secure Boot SDK User Guide</a>. Configuring these settings makes use of the <a href="https://pypi.org/project/cysecuretools/">CySecureTools</a> Python package. CYW20829 specific details are available in the <a href="https://github.com/infineon/cysecuretools/">README_CYW20829.md</a> file.</p>
 <p >When using CySecureTools to initialize the application, it will generate json files for each possible mode. Some of those modes require information about how to access external memory if it is available. These settings are specific to the external memory attached to your board. For this board, the following settings should be used. Note, a description of what each of the settings means is provided at the end.</p>
-<h2><a class="anchor" id="autotoc_md22"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 CYW920829M2EVK-02 Specific External Memory Provisioning Settings</h2>
 <pre class="fragment">    "smif_config":
     {
@@ -162,7 +165,7 @@ CYW920829M2EVK-02 Specific External Memory Provisioning Settings</h2>
             "value": "4-byte"
         }
     },
-</pre> <h2><a class="anchor" id="autotoc_md23"></a>
+</pre> <h2><a class="anchor" id="autotoc_md24"></a>
 Getting Started</h2>
 <p >To get started with the no secure policy, the following commands can be run:<br  />
  $ cysecuretools set-ocd &ndash;name openocd &ndash;path &lt;Path to ModusToolbox™ tools install&gt;/openocd<br  />
@@ -171,9 +174,9 @@ Getting Started</h2>
  $ cysecuretools -t cyw20829 -p policy/policy_no_secure.json provision-device<br  />
  $ cysecuretools -t cyw20829 -p policy/policy_reprovisioning_no_secure.json reprovision-device<br  />
 </p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md25"></a>
 External Memory Provisioning Settings</h2>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md26"></a>
 smif_configuration:</h3>
 <p >This defines how information about the memory is discovered.<br  />
  Valid options are:</p><ul>
@@ -186,14 +189,14 @@ smif_configuration:</h3>
 <li>"QER_6" - Use standard SFDP with Quad Enable Requirements 6.</li>
 <li>"Non-SFDP" - SFDP is not available. Custom memory support is needed.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md26"></a>
+<h3><a class="anchor" id="autotoc_md27"></a>
 chip_select:</h3>
 <p >This specifies which chip select signal is used to talk to the external memory.<br  />
  Valid options are:</p><ul>
 <li>"CS0" - ChipSelect pin 0 is used to select the device.</li>
 <li>"CS1" - ChipSelect pin 1 is used to select the device.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md27"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 data_width:</h3>
 <p >This defines the number of data pins which are used simultaneously to transfer data to/from the device.<br  />
  Valid options are:</p><ul>
@@ -202,7 +205,7 @@ data_width:</h3>
 <li>"4X" - 4 IO pins are used for communication.</li>
 <li>"8X" - 8 IO pins are used for communication.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md29"></a>
 data_select:</h3>
 <p >This setting controls which specific data pins are used for communication with the external memory device.<br  />
  Valid options are: </p><table class="markdownTable">
@@ -229,7 +232,7 @@ data_select:</h3>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">data[7]=SO   </td><td class="markdownTableBodyCenter">data[7]=IO1   </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md30"></a>
 addressing_mode:</h3>
 <p >This defines the number of bytes used to specify addresses when communicating with the external memory.<br  />
  Valid options are:</p><ul>
