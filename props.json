@@ -1,6 +1,6 @@
 {
     "core": {
-        "version": "1.0.3.39794"
+        "version": "1.0.4.41048"
     },
     "opt": {
         "props": {
@@ -8,14 +8,18 @@
                 "ble",
                 "bsp_gen4",
                 "bt",
+                "can",
                 "cat1",
                 "cat1b",
                 "cyw20829",
                 "cyw920829m2evk_02",
+                "dma",
                 "flash_0k",
                 "hal",
+                "i2c",
                 "i2s",
                 "led",
+                "lin",
                 "low_power",
                 "mcu_gp",
                 "memory",
@@ -28,9 +32,12 @@
                 "rtc",
                 "sdhc",
                 "smart_io",
-                "sram_64k",
+                "spi",
+                "sram_256k",
                 "std_crypto",
-                "switch"
+                "switch",
+                "tdm",
+                "uart"
             ],
             "dependencies": {
                 "core-lib": "latest-v1.X",
