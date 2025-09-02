@@ -113,13 +113,13 @@ Kit Contents:</h2>
 </ul>
 <h1><a class="anchor" id="autotoc_md5"></a>
 BSP Configuration</h1>
-<p >The BSP has a few hooks that allow its behavior to be configured. Some of these items are enabled by default while others must be explicitly enabled. Items enabled by default are specified in the CYW920829M2EVK-02.mk file. The items that are enabled can be changed by creating a custom BSP or by editing the application makefile.</p>
+<p >The BSP has a few hooks that allow its behavior to be configured. Some of these items are enabled by default while others must be explicitly enabled. Items enabled by default are specified in the bsp.mk file. The items that are enabled can be changed by creating a custom BSP or by editing the application makefile.</p>
 <p >Components:</p><ul>
 <li>Device specific category reference (e.g.: CAT1) - This component, enabled by default, pulls in any device specific code for this board.</li>
 </ul>
 <p >Defines:</p><ul>
 <li>CYBSP_WIFI_CAPABLE - This define, disabled by default, causes the BSP to initialize the interface to an onboard wireless chip if it has one.</li>
-<li>CY_USING_HAL - This define, enabled by default, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers.</li>
+<li>CY_USING_HAL - This define, enabled by default in some BSPs, specifies that the HAL is intended to be used by the application. This will cause the BSP to include the applicable header file and to initialize the system level drivers. Newer BSPs pull in the v3.x HAL, which enables itself via its own makefile, so CY_USING_HAL is not present.</li>
 <li>CYBSP_CUSTOM_SYSCLK_PM_CALLBACK - This define, disabled by default, causes the BSP to skip registering its default SysClk Power Management callback, if any, and instead to invoke the application-defined function <code>cybsp_register_custom_sysclk_pm_callback</code> to register an application-specific callback.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md6"></a>
@@ -161,7 +161,7 @@ More information</h1>
 <li><a href="https://www.cypress.com/products/modustoolbox-software-environment">ModusToolbox™</a></li>
 </ul>
 <hr  />
-<p> © Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2024. </p>
+<p> © Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2019-2025. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

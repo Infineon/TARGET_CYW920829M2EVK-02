@@ -14,6 +14,14 @@ The CYW920829M2EVK-02 library includes the following:
 * API documentation
 
 ### What Changed?
+#### v3.0.0
+* B1 MPN update from CYW20829B0LKML to CYW20829B1010 and CYW89829B0232 to CYW89829B1232 
+#### v2.0.2
+* DSRAM and secure silicon fix release
+#### v2.0.1
+* Revert support from MTB3.2 to MTB3.0 and above
+#### v2.0.0
+* BTFW as separate bsp dependent asset and MTB3.2 support
 #### v1.0.4
 * MPN CYW89829B01MKSBG to CYW89829B0232 update release for CYW89829
 #### v1.0.3
